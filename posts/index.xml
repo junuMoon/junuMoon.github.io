@@ -33,10 +33,10 @@ Hugo new site &amp;lt;프로젝트 이름&amp;gt;
 프로젝트 디렉토리에서 submodule로 추가해준다.
 서브모듈로 사용하는 이유는 잠시 후에 다뤄보자.
 마지막으로 config.toml 파일에서 테마명을 지정해줘야 한다.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git init
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git init
 git submodule add &amp;lt;anubis.git&amp;gt; themes/anubis
-echo &#39;theme = &amp;quot;anubis&amp;quot;&#39; &amp;gt;&amp;gt; config.toml
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;테스트-블로그-빌딩&#34;&gt;테스트 블로그 빌딩&lt;/h4&gt;
+echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;theme = &amp;#34;anubis&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; config.toml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;테스트-블로그-빌딩&#34;&gt;테스트 블로그 빌딩&lt;/h4&gt;
 &lt;p&gt;블로그 빌딩을 위한 마크다운 파일을 만들어준다.
 Hugo server -D 커맨드를 입력하면 로컬 서버에서 블로그를 빌딩한다.
 포트 번호는 1313이며 -D 옵션을 사용하면 포스트가 draft=true라도 빌딩에 올린다.
