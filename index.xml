@@ -6,10 +6,113 @@
     <description>junuMoon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jan 2021 11:41:11 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jan 2021 12:39:08 +0900</lastBuildDate>
     
     <atom:link href="https://junumoon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo&#43;Github Page 정적 웹페이지 블로그 만들기</title>
+      <link>https://junumoon.github.io/posts/20210127-hugo_blog_development/</link>
+      <pubDate>Wed, 27 Jan 2021 12:39:08 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/20210127-hugo_blog_development/</guid>
+      <description>&lt;p&gt;추가할 내용:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;정적 사이트
+&lt;ol&gt;
+&lt;li&gt;내가 배운 것들&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;블로그의 의미&lt;/li&gt;
+&lt;li&gt;깃헙을 이용한 블로그로서 내가 얻을 수 있는 것&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;휴고를-선택한-이유&#34;&gt;휴고를 선택한 이유&lt;/h3&gt;
+&lt;p&gt;git을 이용한 글쓰기 프로세스를 만드는 중이다.
+Writing-project라는 git repo에서 git을 이용해 글을 쌓아올린다.
+하나의 글 프로젝트로서 발전시키기 전에 짧은 글, 자투리 생각, 소재 등을 모아놓는 디렉토리가 필요했다.
+github page로 블로그를 만들어서 사용하기로 결정했다.
+여기에는 형식과 주제에 제한 없이 자유롭게 올릴 계획이다.&lt;/p&gt;
+&lt;p&gt;블로그 빌딩에 Hugo와 Jekyll을 두고 고민했다.
+Jekyll이 더 널리 사용되는 것은 많으나 블로그 빌딩에 많은 시간이 소요된다고 한다. 수 천개의 토막글이 올라갈 공간이기에 빌딩 타임은 중요하다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/forestry-io/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://forestry.io/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png&#34; alt=&#34;hugo_vs_jekyll_building_time_comparison&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;휴고-블로그-만들기&#34;&gt;휴고 블로그 만들기&lt;/h3&gt;
+&lt;p&gt;다른 사람들의 휴고 블로그 튜토리얼을 보고 설치를 시작했다.&lt;/p&gt;
+&lt;h4 id=&#34;휴고-설치&#34;&gt;휴고 설치&lt;/h4&gt;
+&lt;p&gt;맥을 사용하기에 hombrew로 hugo를 설치한다.
+이어 Hugo new site &amp;lt;프로젝트 이름&amp;gt; 한 줄로 블로그 디렉토리를 만들 수 있다.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Brew install hugo
+Hugo new site &amp;lt;프로젝트 이름&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;테마-설치&#34;&gt;테마 설치&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://themes.gohugo.io&#34;&gt;휴고 테마 사이트&lt;/a&gt;에서 원하는 테마를 선택한 뒤 github repository의 주소를 복사한다.
+프로젝트 디렉토리에서 submodule로 추가해준다.
+서브모듈로 사용하는 이유는 잠시 후에 다뤄보자.
+마지막으로 config.toml 파일에서 테마명을 지정해줘야 한다.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init
+git submodule add &amp;lt;anubis.git&amp;gt; themes/anubis
+echo &#39;theme = &amp;quot;anubis&amp;quot;&#39; &amp;gt;&amp;gt; config.toml
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;테스트-블로그-빌딩&#34;&gt;테스트 블로그 빌딩&lt;/h4&gt;
+&lt;p&gt;블로그 빌딩을 위한 마크다운 파일을 만들어준다.
+Hugo server -D 커맨드를 입력하면 로컬 서버에서 블로그를 빌딩한다.
+포트 번호는 1313이며 -D 옵션을 사용하면 포스트가 draft=true라도 빌딩에 올린다.
+주소창에 &amp;ldquo;localhost:1313&amp;quot;를 넣으면 블로그를 확인할 수 있다.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new posts/test.md
+hugo server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;깃헙-저장소에-연동&#34;&gt;깃헙 저장소에 연동&lt;/h4&gt;
+&lt;p&gt;깃헙에 두 개의 repo를 만든다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;hugo_blog_repo&lt;/li&gt;
+&lt;li&gt;junuMoon.github.io&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1번은 실제 데이터가 올라가는 repo다.
+맘대로 이름 짓는다.
+로컬 저장소와 github 저장소를 연동한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git remote add origin &amp;lt;hugo_blog_repo.git&amp;gt;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2번은 깃헙 페이지 사이트 디렉토리다.
+따라서 github 사용자명에 .github.io를 붙여서 만들어야 한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2번 저장소를 생성할 때 README.md 옵션을 클릭해서 만들도록 하자. 이 저장소는 서브모듈로 추가할 저장소인데 비어있을 시 에러가 발생한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;아까 블로그 빌딩에서 public이란 디렉토리가 생성됐다.
+이 디렉토리가 웹사이트 디렉토리다.
+GitHub 페이지를 사용할 것이기 때문에 원래 있던 public은 지워준다.
+대신 깃헙 저장소를 서브모듈로 추가하고 public이란 이름을 준다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf public
+git submodule add -b main &amp;lt;junuMoon.github.io.git&amp;gt; public
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;포스팅&#34;&gt;포스팅&lt;/h4&gt;
+&lt;p&gt;이제 포스팅을 해보자. &amp;lsquo;hugo&amp;rsquo; 명령어로 사이트를 빌드할 수 있다.
+간편하다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이렇게 하면 public 디렉토리에 사이트가 빌딩된다.
+이를 github 저장소에 업데이트 하자.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cd public
+git add .
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;first blog building&amp;#34;&lt;/span&gt;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;실제 데이터가 들어갈 hugo_blog_repo도 업데이트 해주지 않으면 포스트가 블로그에 올라가지 않는다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cd ..
+git add .
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;post update: 20210127-test&amp;#34;&lt;/span&gt;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;자신의 주소로 들어가면 정상작동하는 것을 볼 수 있다.&lt;/p&gt;
+&lt;h3 id=&#34;오류&#34;&gt;오류&lt;/h3&gt;
+&lt;h4 id=&#34;1-originmaster-is-not-a-commit-and-a-branch-master-cannot-be-created-from-it&#34;&gt;1. &amp;lsquo;origin/master&amp;rsquo; is not a commit and a branch &amp;lsquo;master&amp;rsquo; cannot be created from it&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git submodule add -b master &amp;lt;junumoon.github.io&amp;gt; public
+warning: You appear to have cloned an empty repository.
+fatal: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;origin/master&amp;#39;&lt;/span&gt; is not a commit and a branch &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;master&amp;#39;&lt;/span&gt; cannot be created from it
+Unable to checkout submodule &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;public&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;난 오류만 나오면 치가 떨리고 손이 흐른다.
+구글 번역기를 돌리자.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;경고 : 빈 저장소를 복제 한 것 같습니다.
+치명적 : &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;origin / master&amp;#39;&lt;/span&gt;는 커밋이 아니며 &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;master&amp;#39;&lt;/span&gt; branch를 만들 수 없습니다.
+서브모듈 &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;public&amp;#39;&lt;/span&gt;을 체크아웃 할 수 없습니다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;빈 저장소를 서브모듈로 추가하려 해서 생기는 문제다.
+github 저장소를 만들 때 reame.md 파일 추가 옵션을 설정하면 이런 오류를 피할 수 있다.
+그렇게 저장소 만들면 처음 생기는 branch가 main이니까 다음 처럼 서브모듈 추가 커맨드를 주면 된다.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git submodule add -b main &amp;lt;junumoon.github.io&amp;gt; public
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>Test2</title>
