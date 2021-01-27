@@ -6,10 +6,61 @@
     <description>junuMoon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jan 2021 12:39:08 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jan 2021 16:11:29 +0900</lastBuildDate>
     
     <atom:link href="https://junumoon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo 블로그 포스트 분류법(taxonomies)</title>
+      <link>https://junumoon.github.io/posts/20210127-hugo_tag_taxonomies/</link>
+      <pubDate>Wed, 27 Jan 2021 16:11:29 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/20210127-hugo_tag_taxonomies/</guid>
+      <description>&lt;h3 id=&#34;taxonomy란&#34;&gt;Taxonomy란&lt;/h3&gt;
+&lt;p&gt;분류법.
+배열(arrangement)를 뜻하는 taxis에 법(law)을 뜻하는 nomos가 결합한 단어다.
+생물학에서 종속과목강문계, 영화에서 장르, 블로그에서 태그와 카테고리, 이 모두 분류법의 종류다.&lt;/p&gt;
+&lt;p&gt;분류는 곧 구조다.
+난잡하게 흩어져 있는 콘텐츠들에 순서를 만들고 정렬한다.
+구조를 위한 기준을 정하는 일은 쉽지 않다.
+블로그를 운영해본 사람이라면 카테고리를 몇 번이나 바꾸는 경험을 했을 것이다. 또는 태그를 무한정 찍어내다가 카오스를 마주하기도 한다.&lt;/p&gt;
+&lt;p&gt;적절한 구조를 만들기 위해 올바른 전략을 갖고 분류법을 정해야한다.
+Hugo는 어떻게 Taxonomy를 다루는지를 확인하고 분류법에 대해 다뤄보려 한다.&lt;/p&gt;
+&lt;h3 id=&#34;hugo의-콘텐츠-분류법taxonomy&#34;&gt;Hugo의 콘텐츠 분류법(Taxonomy)&lt;/h3&gt;
+&lt;p&gt;Hugo는 사용자가 정의에 따라 콘텐츠를 분류하는 기능을 제공한다.&lt;/p&gt;
+&lt;h4 id=&#34;taxonomy&#34;&gt;Taxonomy&lt;/h4&gt;
+&lt;p&gt;분류의 기준을 Taxonomy라고 한다.
+영화 블로그를 예시로 들면 배우, 감독, 제작사, 장르 등이 Taxonomy가 된다.
+하나의 Taxonomy는 Term과 Value로 이루어져 있다.&lt;/p&gt;
+&lt;h4 id=&#34;term&#34;&gt;Term&lt;/h4&gt;
+&lt;p&gt;Term은 Taxonomy에 속하는 키워드다.
+예를 들어 장르가 Taxonomy라면 로맨스, 판타지, 호러, 액션 등이 Term이 된다.&lt;/p&gt;
+&lt;h4 id=&#34;value&#34;&gt;Value&lt;/h4&gt;
+&lt;p&gt;Value는 Term에 따른 결과값을 말한다.
+장르:로맨스를 클릭하면 비포선라이즈, 이터널 선샤인 등의 영화 리스트를 반환한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-stylus&#34; data-lang=&#34;stylus&#34;&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;장르&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Taxonomy&lt;/span&gt;
+ 	&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;로맨스&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Term&lt;/span&gt;
+ 		&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;비포&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;선라이즈&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Value&lt;/span&gt;
+ 		&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;이터널&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;선샤인&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Value&lt;/span&gt;
+ 	&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;판타지&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Term&lt;/span&gt;
+ 		&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;해리포터와&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;아즈카반의&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;죄수&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Value&lt;/span&gt;
+ 		&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;반지의&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;제왕&lt;/span&gt;: &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;두개의&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;탑&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;Value&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;포스트의-태그와-카테고리-지정하는-방법&#34;&gt;포스트의 태그와 카테고리 지정하는 방법&lt;/h3&gt;
+&lt;p&gt;Hugo의 기본 Taxonomy는 태그(tag)와 카테고리(category)다.
+Config 파일에 태그와 카테고리를 taxonomy로 지정하지 않아도 Hugo는 이를 기반으로 콘텐츠를 분류한다.
+포스트의 메타데이터를 담은 frontmatter에 category와 tag를 적어주면 끝이다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;categories&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Notes&amp;#34;&lt;/span&gt;]
+&lt;span style=&#34;color:#f92672&#34;&gt;tags&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Blog&amp;#34;&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;카테고리와-태그의-차이점&#34;&gt;카테고리와 태그의 차이점&lt;/h4&gt;
+&lt;p&gt;일반적으로 카테고리로 포스트를 분류한다.
+태그는 포스트의 디테일을 위해 사용하는 부차적인 기능으로 취급한다.
+카테고리의 범위를 너무 크게 잡으면 태그는 무한정 늘어나고, 카테고리의 범위가 좁아지면 카테고리의 기능을 제대로 하지 못한다.&lt;/p&gt;
+&lt;p&gt;카테고리: 계층구조 vs 태그: 네트워크&lt;/p&gt;
+&lt;p&gt;카테고리: 단일기준 vs 태그:&lt;/p&gt;
+&lt;p&gt;데이터&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hugo&#43;Github Page 정적 웹페이지 블로그 만들기</title>
@@ -102,28 +153,6 @@ Writing-project라는 git repo에서 git을 이용해 글을 쌓아올린다.
 하나의 글 프로젝트로서 발전시키기 전에 짧은 글, 자투리 생각, 소재 등을 모아놓는 디렉토리가 필요했다.
 github page로 블로그를 만들어서 사용하기로 결정했다.
 여기에는 형식과 주제에 제한 없이 자유롭게 올릴 계획이다.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Test2</title>
-      <link>https://junumoon.github.io/posts/test2/</link>
-      <pubDate>Wed, 27 Jan 2021 11:41:11 +0900</pubDate>
-      
-      <guid>https://junumoon.github.io/posts/test2/</guid>
-      <description>&lt;p&gt;블로그 발행&lt;/p&gt;
-&lt;p&gt;시도1: 포스트를 만들어 푸쉬를 해본다&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://junumoon.github.io/posts/test/</link>
-      <pubDate>Fri, 22 Jan 2021 21:45:23 +0900</pubDate>
-      
-      <guid>https://junumoon.github.io/posts/test/</guid>
-      <description>&lt;h1 id=&#34;이것은-테스트문서입니다&#34;&gt;이것은 테스트문서입니다.&lt;/h1&gt;
-&lt;p&gt;이것은 테스트문서입니다.&lt;/p&gt;
 </description>
     </item>
     
