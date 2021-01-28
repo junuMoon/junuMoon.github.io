@@ -52,14 +52,7 @@ Config 파일에 태그와 카테고리를 taxonomy로 지정하지 않아도 Hu
 포스트의 메타데이터를 담은 frontmatter에 category와 tag를 적어주면 끝이다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;categories&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Notes&amp;#34;&lt;/span&gt;]
 &lt;span style=&#34;color:#f92672&#34;&gt;tags&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Blog&amp;#34;&lt;/span&gt;]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;카테고리와-태그의-차이점&#34;&gt;카테고리와 태그의 차이점&lt;/h4&gt;
-&lt;p&gt;일반적으로 카테고리로 포스트를 분류한다.
-태그는 포스트의 디테일을 위해 사용하는 부차적인 기능으로 취급한다.
-카테고리의 범위를 너무 크게 잡으면 태그는 무한정 늘어나고, 카테고리의 범위가 좁아지면 카테고리의 기능을 제대로 하지 못한다.&lt;/p&gt;
-&lt;p&gt;카테고리: 계층구조 vs 태그: 네트워크&lt;/p&gt;
-&lt;p&gt;카테고리: 단일기준 vs 태그:&lt;/p&gt;
-&lt;p&gt;데이터&lt;/p&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>
