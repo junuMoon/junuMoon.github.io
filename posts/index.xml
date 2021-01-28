@@ -262,6 +262,19 @@ github page를 hugo로 빌드해서 정적 블로그를 만들었다.
     </item>
     
     <item>
+      <title>20210128 Diffrence_between_tags_and_categories</title>
+      <link>https://junumoon.github.io/posts/20210128-difference_between_tags_and_categories/</link>
+      <pubDate>Thu, 28 Jan 2021 12:17:10 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/20210128-difference_between_tags_and_categories/</guid>
+      <description>&lt;p&gt;태그는 네트워크 카테고리는 계층구조다.&lt;/p&gt;
+&lt;p&gt;데이터 볼륨, 태그의 수, 4분면 그래프&lt;/p&gt;
+&lt;p&gt;좋은 태깅의 기준&lt;/p&gt;
+&lt;p&gt;좋은 카테고리의 기준&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>카피레프트</title>
       <link>https://junumoon.github.io/posts/20210128-copyleft/</link>
       <pubDate>Thu, 28 Jan 2021 10:47:09 +0900</pubDate>
