@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dilettante on junuMoon</title>
+    <link>https://junumoon.github.io/tags/dilettante/</link>
+    <description>junuMoon (dilettante)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jan 2021 10:47:09 +0900</lastBuildDate>
+    
+    <atom:link href="https://junumoon.github.io/tags/dilettante/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>카피레프트</title>
+      <link>https://junumoon.github.io/posts/20210128-copyleft/</link>
+      <pubDate>Thu, 28 Jan 2021 10:47:09 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/20210128-copyleft/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://www.anarchistrevolt.com/pictures/copyleft-all-wrongs-reserved-open-source-software-notice.jpg&#34; alt=&#34;logo-copyleft&#34;&gt;&lt;/p&gt;
+&lt;p&gt;CopyLeft의 로고를 보고 가슴이 두근거렸다.&lt;/p&gt;
+&lt;p&gt;C를 거꾸로 뒤집어 놓고
+All Rights Reserved를 비꼬기 위한 문구인 All Wrongs Reserved가 적혀있다.
+정말 악질적이고 아름답고 소중하지 않은가.
+나는 이를 이렇게 해석한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;카피레프트, 모든 오류는 보존된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;카피레프트의 시작은 프로그래밍이다.
+타이니 베이직 인터프리터를 오픈소스로 개량하여 보급했다.
+그리고 위의 문장으로 누구나 코드를 수정할 수 있음을 알렸다.&lt;/p&gt;
+&lt;p&gt;나는 카피레프트와 오픈소스를 지적 발전에 대한 강한 열망으로 본다.
+하나의 지식이 한계를 뚫고 발전하기 위해서는 많은 사람들에게 공유되고 변형되어야 한다.
+수많은 변형 중에 최고가 살아남겠지.
+그 과정에서 발생하는 오류, 혼돈, 충돌은 지적 발전을 위해 감수해야 할 비용이다.
+통제권 안에서 안전한 만큼만 움직이는 것은 재미도 없고 비겁하다.&lt;/p&gt;
+&lt;p&gt;한 눈에 반해버린 카피레프트에 대해 더 알아보고자 논문을 뒤적였다.
+그러나 카피레프트는 주로 사회학계에서 다뤄지고 있었고
+막시즘, 아나키즘 등과 결합하여 지루한 소리만 해댈 뿐이었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;카피레프트 운동이 약탈일 수 없음은 바로 이 점에서 연유한다. 그것은 어느 누구가 가지고 있는 &amp;lsquo;저작권자로서의 권리&amp;rsquo; 자체를 공격하지 않는다. 오히려 저작권이라는 이름으로 그 저작자의 권리 자체를 무효화하거나 왜곡하는 자본의 문제를 공격할 따름이다. 혹은 이 과정에서 생산되는 천박한 자본적 지식과 정보의 타당성 자체를 비판하기도 한다. 그리고 이와 더불어 정보와 지식은 우리의 것임을 주장하면서 이의 공동체적 관리를 요청하기도 한다.  _ Copyleft 운동: 약탈인가 공유인가?, 한상희&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이미 결론을 정해놓고 말하는 사람의 문장은 얼마나 지루한가.
+&amp;lsquo;이것이 옳다&amp;rsquo;고 말하기 위해 글을 쓰면 문장이 잘 뽑히지 않는다.
+단어는 반복되고 필요없는 군더더기만 붙는다.
+&amp;ldquo;그것은 어느 누구가 가지고 있는 &amp;lsquo;저작권자로서의 권리&amp;rsquo;자체를 공격하지 않는다.&amp;rdquo;
+이게 뭐야.
+&amp;ldquo;개인의 저작권을 공격하지 않는다&amp;quot;로 줄이면 되잖아.
+A가 옳다고 말하면서도 반대하는 대상인 B의 기분을 상하게 하고 싶지 않아서다. 비겁함은 문장의 공격성을 모호함으로 감싼다.&lt;/p&gt;
+&lt;p&gt;한상희 교수는 카피레프트를 카피라이트, 저작권, 자본의 안티테제로만 사용한다.
+지식을 사유화하고 독점하는 못된 디즈니놈들!
+지식이란 자고로 나눠야하는 것인데 어떻게 자본의 개노릇을 한단 말인가!
+이들은 카피레프트를 화를 내기 위해 사용한다.&lt;/p&gt;
+&lt;p&gt;반대로 나는 카피레프트가 재밌다.
+그리고 이 재미야말로 카피레프트의 뿌리에 있다고 말하겠다.
+디즈니가 수백억 달러 로비로 늘리려는 게 저작권 기간이다.
+그런데 카피레프트는 C를 손바닥 뒤집듯 반대로 뒤집고서 낄낄거린다.
+자본이 성역으로 만든 지식의 권리를 무너뜨리는 것은 분노가 아니라 유머다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;혁명을 하려면 웃고 즐기며 하라. 소름끼치도록 심각하게는 하지 마라. 너무 진지하게도 하지 마라. 그저 재미로 하라. 사람들을 미워하기 때문에 혁명에 가담하지 마라. 혁명은 산술적 평균을 깨는 결단이어야 한다. _ 제대로 된 혁명, D.H 로렌스&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;나는 카피레프트의 이념적 구호나 슬로건은 모두 빼버리고
+ALL WRONGS RESERVED라는 문구만 가져오겠다.
+사고의 발전을 위해 과정에서 발생하는 오류까지 포함하겠다는 것.
+오류가 부끄러운 것이 아니라 오히려 자랑스럽다는 것.
+오류야말로 다른 이들에게 도움을 요청하고 대화하고 공유하게 만드는 근본적인 요소라는 것.
+완전무결한 지식의 권리같은 건 개나 줘버리라는 것.
+완벽하고 완결된 지식을 깔끔하게 배포하는 건 재미없다.
+흠있고 논리적 약점이 있어도
+얼마나 날카로운 사고로 주제를 해부하느냐가 중요하다.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
