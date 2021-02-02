@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+
+    
+
+<html lang="en-us" data-theme="dark">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Parameter(매개변수)와 argument(전달인자)의 차이 - junuMoon</title>
+<meta name="description" content="Junu Moon&#39;s playboard about literally everythin">
+
+<link rel="icon" type="image/x-icon" href="https://junumoon.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://junumoon.github.io/favicon.png">
+
+
+
+    
+
+
+
+
+
+    
+    
+    
+
+    
+        <link rel="stylesheet" href="https://junumoon.github.io/css/style.ecab77624a928b7d7b20e2b46c4508313a784aa0e048be944dda0fc9627270a8.css" integrity="sha256-7Kt3YkqSi317IOK0bEUIMTp4SqDgSL6UTdoPyWJycKg=">
+    
+
+
+
+
+
+
+
+<meta property="og:title" content="Parameter(매개변수)와 argument(전달인자)의 차이" />
+<meta property="og:description" content="Parameter: 매개변수, 함수에 정의한 변수(variable)
+Argument: 전달인자, 함수를 호출할 때 전달되는 값(value)
+# 파라미터: 함수 안에서 정의되는 변수 def plus(param1, param2) return param1 &#43; param2 # 여기서 arg1, arg2는 변수(variable) arg1 = 1 arg2 = 2 # 여기서 arg1, arg2는 전달인자(argument) result = plus(arg1, arg2) # result = 3 함수는 매개변수/전달인자를 갖지 않을 수도 또는 여러 개의 매개변수/전달인자를 가질 수도 있다.
+참고:
+ 초보몽키의 개발공부로그 개발자의 글쓰기, 김철수  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://junumoon.github.io/posts/20210201_parameter_and_arguments/" />
+<meta property="article:published_time" content="2021-02-02T22:33:06+09:00" />
+<meta property="article:modified_time" content="2021-02-02T22:33:06+09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Parameter(매개변수)와 argument(전달인자)의 차이"/>
+<meta name="twitter:description" content="Parameter: 매개변수, 함수에 정의한 변수(variable)
+Argument: 전달인자, 함수를 호출할 때 전달되는 값(value)
+# 파라미터: 함수 안에서 정의되는 변수 def plus(param1, param2) return param1 &#43; param2 # 여기서 arg1, arg2는 변수(variable) arg1 = 1 arg2 = 2 # 여기서 arg1, arg2는 전달인자(argument) result = plus(arg1, arg2) # result = 3 함수는 매개변수/전달인자를 갖지 않을 수도 또는 여러 개의 매개변수/전달인자를 가질 수도 있다.
+참고:
+ 초보몽키의 개발공부로그 개발자의 글쓰기, 김철수  "/>
+
+
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header class="common-header"> 
+            
+                <h1 class="site-title">
+    <a href="/">junuMoon</a>
+</h1>
+
+    <nav>
+        
+        
+        <a class="" href="https://junumoon.github.io/tags/" title="">Tags</a>
+        
+    </nav>
+
+
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+    
+    
+    <article class="post h-entry">
+        <header class="post-header">
+            <h1 class="p-name post-title">Parameter(매개변수)와 argument(전달인자)의 차이</h1>
+        </header>
+        <div class="content e-content">
+            <p>Parameter: 매개변수, 함수에 정의한 변수(variable)</p>
+<p>Argument: 전달인자, 함수를 호출할 때 전달되는 값(value)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 파라미터: 함수 안에서 정의되는 변수</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plus</span>(param1, param2)
+	<span style="color:#66d9ef">return</span> param1 <span style="color:#f92672">+</span> param2
+
+<span style="color:#75715e"># 여기서 arg1, arg2는 변수(variable)</span>
+arg1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+arg2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+
+<span style="color:#75715e"># 여기서 arg1, arg2는 전달인자(argument)</span>
+result <span style="color:#f92672">=</span> plus(arg1, arg2)
+<span style="color:#75715e"># result = 3</span>
+</code></pre></div><p>함수는 매개변수/전달인자를 갖지 않을 수도 또는 여러 개의 매개변수/전달인자를 가질 수도 있다.</p>
+<p>참고:</p>
+<ol>
+<li><a href="https://wayhome25.github.io/etc/2017/12/31/parameter-argument/">초보몽키의 개발공부로그</a></li>
+<li>개발자의 글쓰기, 김철수</li>
+</ol>
+
+        </div>
+        
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">2022-02-27</div>
+    
+    
+    <a class="post-hidden-url u-url" href="https://junumoon.github.io/posts/20210201_parameter_and_arguments/">https://junumoon.github.io/posts/20210201_parameter_and_arguments/</a>
+    <div class="post-hidden-author p-author">Junu Moon</div>
+
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://junumoon.github.io/categories/">TIL</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://junumoon.github.io/tags/computer-science">#Computer Science</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+
+    
+
+    
+
+
+        </main>
+        
+            <footer class="common-footer">
+    
+    
+
+    <div class="common-footer-bottom">
+        
+        <div class="copyright">
+            <p>© Junu Moon, 2021<br>
+            Powered by <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" rel="noopener noreferrer" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+            </p>  
+        </div> 
+
+        
+
+    
+
+
+   
+    </div>
+
+    <p class="h-card vcard">
+
+    <a href=https://junumoon.github.io class="p-name u-url url fn" rel="me">Junu Moon</a> 
+
+    
+
+    
+</p> 
+    
+</footer>
+
+        
+    </div>
+</body>
+</html>

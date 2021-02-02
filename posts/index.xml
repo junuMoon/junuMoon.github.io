@@ -6,10 +6,38 @@
     <description>junuMoon (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Jan 2021 12:36:53 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 02 Feb 2021 22:33:06 +0900</lastBuildDate>
     
     <atom:link href="https://junumoon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Parameter(매개변수)와 argument(전달인자)의 차이</title>
+      <link>https://junumoon.github.io/posts/20210201_parameter_and_arguments/</link>
+      <pubDate>Tue, 02 Feb 2021 22:33:06 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/20210201_parameter_and_arguments/</guid>
+      <description>&lt;p&gt;Parameter: 매개변수, 함수에 정의한 변수(variable)&lt;/p&gt;
+&lt;p&gt;Argument: 전달인자, 함수를 호출할 때 전달되는 값(value)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 파라미터: 함수 안에서 정의되는 변수&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;plus&lt;/span&gt;(param1, param2)
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; param1 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; param2
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 여기서 arg1, arg2는 변수(variable)&lt;/span&gt;
+arg1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+arg2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 여기서 arg1, arg2는 전달인자(argument)&lt;/span&gt;
+result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; plus(arg1, arg2)
+&lt;span style=&#34;color:#75715e&#34;&gt;# result = 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;함수는 매개변수/전달인자를 갖지 않을 수도 또는 여러 개의 매개변수/전달인자를 가질 수도 있다.&lt;/p&gt;
+&lt;p&gt;참고:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://wayhome25.github.io/etc/2017/12/31/parameter-argument/&#34;&gt;초보몽키의 개발공부로그&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;개발자의 글쓰기, 김철수&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>My Unbelievably FxxdUp Life Organizer1</title>
