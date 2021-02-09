@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+
+    
+
+<html lang="en-us" data-theme="dark">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>20210209 TIE Tensorflow Model - junuMoon</title>
+<meta name="description" content="Junu Moon&#39;s playboard about literally everythin">
+
+<link rel="icon" type="image/x-icon" href="https://junumoon.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://junumoon.github.io/favicon.png">
+
+
+
+    
+
+
+
+
+
+    
+    
+    
+
+    
+        <link rel="stylesheet" href="https://junumoon.github.io/css/style.ecab77624a928b7d7b20e2b46c4508313a784aa0e048be944dda0fc9627270a8.css" integrity="sha256-7Kt3YkqSi317IOK0bEUIMTp4SqDgSL6UTdoPyWJycKg=">
+    
+
+
+
+
+
+
+
+<meta property="og:title" content="20210209 TIE Tensorflow Model" />
+<meta property="og:description" content="[Tensorflow model.evaluate()] Numpy class type value error --------------------------------------------------------------------------- ValueError Traceback (most recent call last) &lt;ipython-input-99-7a9586bd062a&gt; in &lt;module&gt;() ----&gt; 1 model.evaluate(x_test, y_test, verbose=2) /usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/data_adapter.py in select_data_adapter(x, y) 962 &#34;Failed to find data adapter that can handle &#34; 963 &#34;input: {}, {}&#34;.format( --&gt; 964 _type_name(x), _type_name(y))) 965 elif len(adapter_cls) &gt; 1: 966 raise RuntimeError( ValueError: Failed to find data adapter that can handle input: &lt;class &#39;numpy.ndarray&#39;&gt;, (&lt;class &#39;list&#39;&gt; containing values of types {&#39;(&lt;class \&#39;list\&#39;&gt; containing values of types {&#34;&lt;class \&#39;float\&#39;&gt;&#34;})&#39;}) 오류 개요  오류 종류: ValueError 언어: Python 라이브러리: Tensorflow, Numpy 오류 발생 라인: model." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/" />
+<meta property="article:published_time" content="2021-02-09T20:12:34+09:00" />
+<meta property="article:modified_time" content="2021-02-09T20:12:34+09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="20210209 TIE Tensorflow Model"/>
+<meta name="twitter:description" content="[Tensorflow model.evaluate()] Numpy class type value error --------------------------------------------------------------------------- ValueError Traceback (most recent call last) &lt;ipython-input-99-7a9586bd062a&gt; in &lt;module&gt;() ----&gt; 1 model.evaluate(x_test, y_test, verbose=2) /usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/data_adapter.py in select_data_adapter(x, y) 962 &#34;Failed to find data adapter that can handle &#34; 963 &#34;input: {}, {}&#34;.format( --&gt; 964 _type_name(x), _type_name(y))) 965 elif len(adapter_cls) &gt; 1: 966 raise RuntimeError( ValueError: Failed to find data adapter that can handle input: &lt;class &#39;numpy.ndarray&#39;&gt;, (&lt;class &#39;list&#39;&gt; containing values of types {&#39;(&lt;class \&#39;list\&#39;&gt; containing values of types {&#34;&lt;class \&#39;float\&#39;&gt;&#34;})&#39;}) 오류 개요  오류 종류: ValueError 언어: Python 라이브러리: Tensorflow, Numpy 오류 발생 라인: model."/>
+
+
+
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header class="common-header"> 
+            
+                <h1 class="site-title">
+    <a href="/">junuMoon</a>
+</h1>
+
+    <nav>
+        
+        
+        <a class="" href="https://junumoon.github.io/tags/" title="">Tags</a>
+        
+    </nav>
+
+
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+    
+    
+    <article class="post h-entry">
+        <header class="post-header">
+            <h1 class="p-name post-title">20210209 TIE Tensorflow Model</h1>
+        </header>
+        <div class="content e-content">
+            <h1 id="tensorflow-modelevaluate-numpy-class-type-value-error">[Tensorflow model.evaluate()] Numpy class type value error</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">---------------------------------------------------------------------------
+ValueError                                Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>
+&lt;ipython-input-99-7a9586bd062a&gt; in &lt;module&gt;<span style="color:#f92672">()</span>
+----&gt; <span style="color:#ae81ff">1</span> model.evaluate<span style="color:#f92672">(</span>x_test, y_test, verbose<span style="color:#f92672">=</span>2<span style="color:#f92672">)</span>
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/data_adapter.py in select_data_adapter<span style="color:#f92672">(</span>x, y<span style="color:#f92672">)</span>
+    <span style="color:#ae81ff">962</span>         <span style="color:#e6db74">&#34;Failed to find data adapter that can handle &#34;</span>
+    <span style="color:#ae81ff">963</span>         <span style="color:#e6db74">&#34;input: {}, {}&#34;</span>.format<span style="color:#f92672">(</span>
+--&gt; <span style="color:#ae81ff">964</span>             _type_name<span style="color:#f92672">(</span>x<span style="color:#f92672">)</span>, _type_name<span style="color:#f92672">(</span>y<span style="color:#f92672">)))</span>
+    <span style="color:#ae81ff">965</span>   <span style="color:#66d9ef">elif</span> len<span style="color:#f92672">(</span>adapter_cls<span style="color:#f92672">)</span> &gt; 1:
+    <span style="color:#ae81ff">966</span>     raise RuntimeError<span style="color:#f92672">(</span>
+ValueError: Failed to find data adapter that can handle input: &lt;class <span style="color:#e6db74">&#39;numpy.ndarray&#39;</span>&gt;, <span style="color:#f92672">(</span>&lt;class <span style="color:#e6db74">&#39;list&#39;</span>&gt; containing values of types <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;(&lt;class \&#39;</span>list<span style="color:#ae81ff">\&#39;</span>&gt; containing values of types <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;&lt;class \&#39;float\&#39;&gt;&#34;</span><span style="color:#f92672">})</span><span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">})</span>
+</code></pre></div><h3 id="오류-개요">오류 개요</h3>
+<ol>
+<li>오류 종류: ValueError</li>
+<li>언어: Python</li>
+<li>라이브러리: Tensorflow, Numpy</li>
+<li>오류 발생 라인: <code>model.evaluate(x_test, y_test, verbose=2)</code></li>
+<li>오류 원문: 입력값을 처리할 수 있는 데이터 어댑터를 찾지 못함:</li>
+<li>오류 이유: <code>numpy array</code>클래스와 <code>numpy list</code> 클래스의 혼용</li>
+</ol>
+<h3 id="오류-해결">오류 해결</h3>
+<p>colab에서 이것저것 만지면서 array를 담은 변수가 list로 바뀌었던 것 같다. 다시 처음부터 실행하니 오류 없음.</p>
+
+        </div>
+        
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">9092-02-97</div>
+    
+    
+    <a class="post-hidden-url u-url" href="https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/">https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/</a>
+    <div class="post-hidden-author p-author">Junu Moon</div>
+
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://junumoon.github.io/categories/">TIE</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://junumoon.github.io/tags/tensorflow">#tensorflow</a></li>
+                    
+                        <li><a href="https://junumoon.github.io/tags/numpy">#numpy</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+
+    
+
+    
+
+    
+
+
+        </main>
+        
+            <footer class="common-footer">
+    
+    
+
+    <div class="common-footer-bottom">
+        
+        <div class="copyright">
+            <p>© Junu Moon, 2021<br>
+            Powered by <a target="_blank" rel="noopener noreferrer" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" rel="noopener noreferrer" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+            </p>  
+        </div> 
+
+        
+
+    
+
+
+   
+    </div>
+
+    <p class="h-card vcard">
+
+    <a href=https://junumoon.github.io class="p-name u-url url fn" rel="me">Junu Moon</a> 
+
+    
+
+    
+</p> 
+    
+</footer>
+
+        
+    </div>
+</body>
+</html>

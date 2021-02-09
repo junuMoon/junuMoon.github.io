@@ -3,8 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/posts/20210209-til-tensorflow-quickstart_for_beginners/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://junumoon.github.io/categories/</loc>
-    <lastmod>2021-02-02T22:33:06+09:00</lastmod>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/tags/deeplearning/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/tags/numpy/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/posts/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/tags/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/tags/tensorflow/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/categories/tie/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/categories/til/</loc>
+    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
   </url>
   
   <url>
@@ -13,27 +63,7 @@
   </url>
   
   <url>
-    <loc>https://junumoon.github.io/</loc>
-    <lastmod>2021-02-02T22:33:06+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://junumoon.github.io/posts/20210201_parameter_and_arguments/</loc>
-    <lastmod>2021-02-02T22:33:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://junumoon.github.io/posts/</loc>
-    <lastmod>2021-02-02T22:33:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://junumoon.github.io/tags/</loc>
-    <lastmod>2021-02-02T22:33:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://junumoon.github.io/categories/til/</loc>
     <lastmod>2021-02-02T22:33:06+09:00</lastmod>
   </url>
   

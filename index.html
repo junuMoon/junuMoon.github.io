@@ -46,7 +46,7 @@
 <meta property="og:description" content="Junu Moon&#39;s playboard about literally everythin" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://junumoon.github.io/" />
-<meta property="og:updated_time" content="2021-02-02T22:33:06+09:00" />
+<meta property="og:updated_time" content="2021-02-09T20:12:34+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="junuMoon"/>
@@ -92,6 +92,102 @@
 
     <div class="articles h-feed">
         
+        
+            <article class="post-list h-feed">
+    <header class="post-header">
+        <h1 class="p-name post-title"><a class="u-url" href="/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/">20210209 TIE Tensorflow Model</a></h1>
+    </header>
+
+    <div class="content post-summary p-summary">
+        [Tensorflow model.evaluate()] Numpy class type value error --------------------------------------------------------------------------- ValueError Traceback (most recent call last) &lt;ipython-input-99-7a9586bd062a&gt; in &lt;module&gt;() ----&gt; 1 model.evaluate(x_test, y_test, verbose=2) /usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/data_adapter.py in select_data_adapter(x, y) 962 &#34;Failed to find data adapter that can handle &#34; 963 &#34;input: {}, {}&#34;.format( --&gt; 964 _type_name(x), _type_name(y))) 965 elif len(adapter_cls) &gt; 1: 966 raise RuntimeError( ValueError: Failed to find data adapter that can handle input: &lt;class &#39;numpy.ndarray&#39;&gt;, (&lt;class &#39;list&#39;&gt; containing values of types {&#39;(&lt;class \&#39;list\&#39;&gt; containing values of types {&#34;&lt;class \&#39;float\&#39;&gt;&#34;})&#39;}) 오류 개요  오류 종류: ValueError 언어: Python 라이브러리: Tensorflow, Numpy 오류 발생 라인: model.
+    </div>
+    
+    
+    
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">9092-02-97</div>
+    
+    
+    <a class="post-hidden-url u-url" href="https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/">https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/</a>
+    <div class="post-hidden-author p-author">Junu Moon</div>
+
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://junumoon.github.io/categories/">TIE</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://junumoon.github.io/tags/tensorflow">#tensorflow</a></li>
+                    
+                        <li><a href="https://junumoon.github.io/tags/numpy">#numpy</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+</article>
+        
+            <article class="post-list h-feed">
+    <header class="post-header">
+        <h1 class="p-name post-title"><a class="u-url" href="/posts/20210209-til-tensorflow-quickstart_for_beginners/">20210209 TIE Tensorflow Model</a></h1>
+    </header>
+
+    <div class="content post-summary p-summary">
+        TensorFlow: Quickstart for beginners Flatten 다차원 벡터를 일차원으로 쭉 펴준다.
+Dense Input과 Ouput 레이어를 연결한다.
+Dropout 무작위로 뉴론을 드랍하여 모델의 overfitting을 막는다.
+Softmax 입력 벡터의 원소를 0과 1사이의 값으로 변환하여 리턴한다.
+Loss 모델의 예측값과 실제 답의 차이.
+Sparse Categorical Crossentropy Loss function 중 하나
+model.compile / model.fit / model.evaluate compile 메소드: 손실함수, 옵티마이저, 측정지표 등의 모델 구성 fit 메소드: 손실함수의 값을 최소로 하는 모델 훈련 evalute 메소드: 모델의 성능을 측정
+    </div>
+    
+    
+    
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">9092-02-97</div>
+    
+    
+    <a class="post-hidden-url u-url" href="https://junumoon.github.io/posts/20210209-til-tensorflow-quickstart_for_beginners/">https://junumoon.github.io/posts/20210209-til-tensorflow-quickstart_for_beginners/</a>
+    <div class="post-hidden-author p-author">Junu Moon</div>
+
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://junumoon.github.io/categories/">TIL</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://junumoon.github.io/tags/tensorflow">#Tensorflow</a></li>
+                    
+                        <li><a href="https://junumoon.github.io/tags/deeplearning">#DeepLearning</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+</article>
         
             <article class="post-list h-feed">
     <header class="post-header">

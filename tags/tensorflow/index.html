@@ -12,10 +12,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
-<title>TIL - junuMoon</title>
+<title>tensorflow - junuMoon</title>
 <meta name="description" content="Junu Moon&#39;s playboard about literally everythin">
 
-<link rel="alternate" type="application/rss+xml" href="https://junumoon.github.io/categories/til/index.xml" title="junuMoon" />
+<link rel="alternate" type="application/rss+xml" href="https://junumoon.github.io/tags/tensorflow/index.xml" title="junuMoon" />
 <link rel="icon" type="image/x-icon" href="https://junumoon.github.io/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="https://junumoon.github.io/favicon.png">
 
@@ -41,14 +41,14 @@
 
 
 
-<meta property="og:title" content="TIL" />
+<meta property="og:title" content="tensorflow" />
 <meta property="og:description" content="Junu Moon&#39;s playboard about literally everythin" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://junumoon.github.io/categories/til/" />
+<meta property="og:url" content="https://junumoon.github.io/tags/tensorflow/" />
 <meta property="og:updated_time" content="2021-02-09T20:12:34+09:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="TIL"/>
+<meta name="twitter:title" content="tensorflow"/>
 <meta name="twitter:description" content="Junu Moon&#39;s playboard about literally everythin"/>
 
 
@@ -85,10 +85,55 @@
         </header>
         <main id="main" tabindex="-1"> 
             
-    <h1>Category: TIL</h1>
+    <h1>Tag: tensorflow</h1>
     <div class="post-info">
-        <a href="https://junumoon.github.io/categories">To all categories</a>
+        <a href="https://junumoon.github.io/tags">To all tags</a>
     </div>
+    
+        <article class="post-list h-feed">
+    <header class="post-header">
+        <h1 class="p-name post-title"><a class="u-url" href="/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/">20210209 TIE Tensorflow Model</a></h1>
+    </header>
+
+    <div class="content post-summary p-summary">
+        [Tensorflow model.evaluate()] Numpy class type value error --------------------------------------------------------------------------- ValueError Traceback (most recent call last) &lt;ipython-input-99-7a9586bd062a&gt; in &lt;module&gt;() ----&gt; 1 model.evaluate(x_test, y_test, verbose=2) /usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/data_adapter.py in select_data_adapter(x, y) 962 &#34;Failed to find data adapter that can handle &#34; 963 &#34;input: {}, {}&#34;.format( --&gt; 964 _type_name(x), _type_name(y))) 965 elif len(adapter_cls) &gt; 1: 966 raise RuntimeError( ValueError: Failed to find data adapter that can handle input: &lt;class &#39;numpy.ndarray&#39;&gt;, (&lt;class &#39;list&#39;&gt; containing values of types {&#39;(&lt;class \&#39;list\&#39;&gt; containing values of types {&#34;&lt;class \&#39;float\&#39;&gt;&#34;})&#39;}) 오류 개요  오류 종류: ValueError 언어: Python 라이브러리: Tensorflow, Numpy 오류 발생 라인: model.
+    </div>
+    
+    
+    
+
+    
+
+
+<div class="post-info">
+    
+        <div class="post-date dt-published">9092-02-97</div>
+    
+    
+    <a class="post-hidden-url u-url" href="https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/">https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/</a>
+    <div class="post-hidden-author p-author">Junu Moon</div>
+
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://junumoon.github.io/categories/">TIE</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://junumoon.github.io/tags/tensorflow">#tensorflow</a></li>
+                    
+                        <li><a href="https://junumoon.github.io/tags/numpy">#numpy</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+</article>
     
         <article class="post-list h-feed">
     <header class="post-header">
@@ -133,53 +178,6 @@ model.compile / model.fit / model.evaluate compile 메소드: 손실함수, 옵�
                         <li><a href="https://junumoon.github.io/tags/tensorflow">#Tensorflow</a></li>
                     
                         <li><a href="https://junumoon.github.io/tags/deeplearning">#DeepLearning</a></li>
-                    
-                </ul>
-        
-    </div>
-</div>
-
-</article>
-    
-        <article class="post-list h-feed">
-    <header class="post-header">
-        <h1 class="p-name post-title"><a class="u-url" href="/posts/20210201_parameter_and_arguments/">Parameter(매개변수)와 argument(전달인자)의 차이</a></h1>
-    </header>
-
-    <div class="content post-summary p-summary">
-        Parameter: 매개변수, 함수에 정의한 변수(variable)
-Argument: 전달인자, 함수를 호출할 때 전달되는 값(value)
-# 파라미터: 함수 안에서 정의되는 변수 def plus(param1, param2) return param1 + param2 # 여기서 arg1, arg2는 변수(variable) arg1 = 1 arg2 = 2 # 여기서 arg1, arg2는 전달인자(argument) result = plus(arg1, arg2) # result = 3 함수는 매개변수/전달인자를 갖지 않을 수도 또는 여러 개의 매개변수/전달인자를 가질 수도 있다.
-참고:
- 초보몽키의 개발공부로그 개발자의 글쓰기, 김철수  
-    </div>
-    
-    
-    
-
-    
-
-
-<div class="post-info">
-    
-        <div class="post-date dt-published">2022-02-27</div>
-    
-    
-    <a class="post-hidden-url u-url" href="https://junumoon.github.io/posts/20210201_parameter_and_arguments/">https://junumoon.github.io/posts/20210201_parameter_and_arguments/</a>
-    <div class="post-hidden-author p-author">Junu Moon</div>
-
-    <div class="post-taxonomies">
-        
-            <ul class="post-categories">
-                
-                    <li><a href="https://junumoon.github.io/categories/">TIL</a></li>
-                
-            </ul>
-            
-            
-                <ul class="post-tags">
-                    
-                        <li><a href="https://junumoon.github.io/tags/computer-science">#Computer Science</a></li>
                     
                 </ul>
         

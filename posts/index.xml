@@ -6,10 +6,68 @@
     <description>junuMoon (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Feb 2021 22:33:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 09 Feb 2021 20:12:34 +0900</lastBuildDate>
     
     <atom:link href="https://junumoon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>20210209 TIE Tensorflow Model</title>
+      <link>https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:34 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/</guid>
+      <description>&lt;h1 id=&#34;tensorflow-modelevaluate-numpy-class-type-value-error&#34;&gt;[Tensorflow model.evaluate()] Numpy class type value error&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;---------------------------------------------------------------------------
+ValueError                                Traceback &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;most recent call last&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&amp;lt;ipython-input-99-7a9586bd062a&amp;gt; in &amp;lt;module&amp;gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+----&amp;gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; model.evaluate&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;x_test, y_test, verbose&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/keras/engine/data_adapter.py in select_data_adapter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;x, y&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#ae81ff&#34;&gt;962&lt;/span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to find data adapter that can handle &amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#ae81ff&#34;&gt;963&lt;/span&gt;         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input: {}, {}&amp;#34;&lt;/span&gt;.format&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;
+--&amp;gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;964&lt;/span&gt;             _type_name&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;x&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, _type_name&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;y&lt;span style=&#34;color:#f92672&#34;&gt;)))&lt;/span&gt;
+    &lt;span style=&#34;color:#ae81ff&#34;&gt;965&lt;/span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; len&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;adapter_cls&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &amp;gt; 1:
+    &lt;span style=&#34;color:#ae81ff&#34;&gt;966&lt;/span&gt;     raise RuntimeError&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;
+ValueError: Failed to find data adapter that can handle input: &amp;lt;class &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;numpy.ndarray&amp;#39;&lt;/span&gt;&amp;gt;, &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&amp;lt;class &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;list&amp;#39;&lt;/span&gt;&amp;gt; containing values of types &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(&amp;lt;class \&amp;#39;&lt;/span&gt;list&lt;span style=&#34;color:#ae81ff&#34;&gt;\&amp;#39;&lt;/span&gt;&amp;gt; containing values of types &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;class \&amp;#39;float\&amp;#39;&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;})&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;오류-개요&#34;&gt;오류 개요&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;오류 종류: ValueError&lt;/li&gt;
+&lt;li&gt;언어: Python&lt;/li&gt;
+&lt;li&gt;라이브러리: Tensorflow, Numpy&lt;/li&gt;
+&lt;li&gt;오류 발생 라인: &lt;code&gt;model.evaluate(x_test, y_test, verbose=2)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;오류 원문: 입력값을 처리할 수 있는 데이터 어댑터를 찾지 못함:&lt;/li&gt;
+&lt;li&gt;오류 이유: &lt;code&gt;numpy array&lt;/code&gt;클래스와 &lt;code&gt;numpy list&lt;/code&gt; 클래스의 혼용&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;오류-해결&#34;&gt;오류 해결&lt;/h3&gt;
+&lt;p&gt;colab에서 이것저것 만지면서 array를 담은 변수가 list로 바뀌었던 것 같다. 다시 처음부터 실행하니 오류 없음.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>20210209 TIE Tensorflow Model</title>
+      <link>https://junumoon.github.io/posts/20210209-til-tensorflow-quickstart_for_beginners/</link>
+      <pubDate>Tue, 09 Feb 2021 20:12:34 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/20210209-til-tensorflow-quickstart_for_beginners/</guid>
+      <description>&lt;h1 id=&#34;tensorflow-quickstart-for-beginners&#34;&gt;TensorFlow: Quickstart for beginners&lt;/h1&gt;
+&lt;h3 id=&#34;flatten&#34;&gt;Flatten&lt;/h3&gt;
+&lt;p&gt;다차원 벡터를 일차원으로 쭉 펴준다.&lt;/p&gt;
+&lt;h3 id=&#34;dense&#34;&gt;Dense&lt;/h3&gt;
+&lt;p&gt;Input과 Ouput 레이어를 연결한다.&lt;/p&gt;
+&lt;h3 id=&#34;dropout&#34;&gt;Dropout&lt;/h3&gt;
+&lt;p&gt;무작위로 뉴론을 드랍하여 모델의 overfitting을 막는다.&lt;/p&gt;
+&lt;h3 id=&#34;softmax&#34;&gt;Softmax&lt;/h3&gt;
+&lt;p&gt;입력 벡터의 원소를 0과 1사이의 값으로 변환하여 리턴한다.&lt;/p&gt;
+&lt;h3 id=&#34;loss&#34;&gt;Loss&lt;/h3&gt;
+&lt;p&gt;모델의 예측값과 실제 답의 차이.&lt;/p&gt;
+&lt;h3 id=&#34;sparse-categorical-crossentropy&#34;&gt;Sparse Categorical Crossentropy&lt;/h3&gt;
+&lt;p&gt;Loss function 중 하나&lt;/p&gt;
+&lt;h3 id=&#34;modelcompile--modelfit--modelevaluate&#34;&gt;model.compile / model.fit / model.evaluate&lt;/h3&gt;
+&lt;p&gt;compile 메소드: 손실함수, 옵티마이저, 측정지표 등의 모델 구성
+fit 메소드: 손실함수의 값을 최소로 하는 모델 훈련
+evalute 메소드: 모델의 성능을 측정&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Parameter(매개변수)와 argument(전달인자)의 차이</title>
