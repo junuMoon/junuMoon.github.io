@@ -12,28 +12,63 @@
     
     
     <item>
-      <title>[20210209_TIL] Tensorflow Model</title>
+      <title>[20210209_TIL] Tensorflow Tutorial</title>
       <link>https://junumoon.github.io/posts/20210209-til-tensorflow-quickstart_for_beginners/</link>
       <pubDate>Tue, 09 Feb 2021 20:12:34 +0900</pubDate>
       
       <guid>https://junumoon.github.io/posts/20210209-til-tensorflow-quickstart_for_beginners/</guid>
-      <description>&lt;h1 id=&#34;tensorflow-quickstart-for-beginners&#34;&gt;TensorFlow: Quickstart for beginners&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;layers&#34;&gt;Layers&lt;/h2&gt;
+&lt;p&gt;심층신경망 모델은 여러 개의 층(layer)로 이뤄진다.&lt;/p&gt;
 &lt;h3 id=&#34;flatten&#34;&gt;Flatten&lt;/h3&gt;
-&lt;p&gt;다차원 벡터를 일차원으로 쭉 펴준다.&lt;/p&gt;
+&lt;p&gt;다차원 벡터를 일차원으로 쭉 펴준다. 이 레이어에는 학습시킬 파라미터가 없다. 단지 데이터를 반영할 뿐이다.&lt;/p&gt;
 &lt;h3 id=&#34;dense&#34;&gt;Dense&lt;/h3&gt;
-&lt;p&gt;Input과 Ouput 레이어를 연결한다.&lt;/p&gt;
+&lt;p&gt;Input과 Output 레이어를 연결한다. densely connected(fully connected)는 깊게 얽힌, 다른 단어로 &amp;lsquo;심층&amp;rsquo;을 뜻한다. keras.layers.Dense 메소드는 노드 개수를 파라미터로 갖는다.&lt;/p&gt;
 &lt;h3 id=&#34;dropout&#34;&gt;Dropout&lt;/h3&gt;
-&lt;p&gt;무작위로 뉴론을 드랍하여 모델의 overfitting을 막는다.&lt;/p&gt;
-&lt;h3 id=&#34;softmax&#34;&gt;Softmax&lt;/h3&gt;
-&lt;p&gt;입력 벡터의 원소를 0과 1사이의 값으로 변환하여 리턴한다.&lt;/p&gt;
-&lt;h3 id=&#34;loss&#34;&gt;Loss&lt;/h3&gt;
-&lt;p&gt;모델의 예측값과 실제 답의 차이.&lt;/p&gt;
-&lt;h3 id=&#34;sparse-categorical-crossentropy&#34;&gt;Sparse Categorical Crossentropy&lt;/h3&gt;
-&lt;p&gt;Loss function 중 하나&lt;/p&gt;
-&lt;h3 id=&#34;modelcompile--modelfit--modelevaluate&#34;&gt;model.compile / model.fit / model.evaluate&lt;/h3&gt;
-&lt;p&gt;compile 메소드: 손실함수, 옵티마이저, 측정지표 등의 모델 구성
-fit 메소드: 손실함수의 값을 최소로 하는 모델 훈련
-evalute 메소드: 모델의 성능을 측정&lt;/p&gt;
+&lt;p&gt;모델이 훈련 데이터에 지나치게 맞춰져 오히려 테스트 데이터에서 정확도가 떨어지는 현상인 과적합(overfitting)을 막기 위한 옵션. 파라미터로 받은 rate 만큼 무작위로 뉴론을 드랍하여 모델의 overfitting을 막는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf&#34;&gt;Dropout: A Simple Way to Prevent Neural Networks from Overfitting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;compile-the-model&#34;&gt;Compile the model&lt;/h2&gt;
+&lt;p&gt;모델을 훈련시키기 전에 다음과 같은 세팅이 필요하다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;compile(optimizer&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;adam&amp;#39;&lt;/span&gt;,
+			 loss&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;losses&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SparseCategoricalCrossentropy(from_logits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True),
+			 metrics&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;accuracy&amp;#39;&lt;/span&gt;]
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;optimizer&#34;&gt;Optimizer&lt;/h3&gt;
+&lt;p&gt;모델의 손실 함수값을 최소할 수 있도록 만드는 학습 전략. adam, SDG 등이 있다.&lt;/p&gt;
+&lt;h3 id=&#34;loss-function&#34;&gt;Loss function&lt;/h3&gt;
+&lt;p&gt;모델의 예측값과 실제 답의 차이를 계산하여 모델이 잘 훈련되고 있는지를 판단한다. 이 값을 최소화하여 모델을 올바른 방향으로 지도할 수 있다. Sparse Categorical Crossentropy 등이 있다.&lt;/p&gt;
+&lt;h3 id=&#34;metrics&#34;&gt;Metrics&lt;/h3&gt;
+&lt;p&gt;모델의 성능을 평가하는 척도. 정확도(Accuracy), 정밀도(Precision), F1-score 등이 있다.&lt;/p&gt;
+&lt;h3 id=&#34;logit&#34;&gt;Logit&lt;/h3&gt;
+&lt;p&gt;log+odds. 로짓(logit)은 0~1의 확률값(odds)에 로그를 씌워 -∞~∞의 값으로 만든다. 이를 sigmoid나 softmax 등의 활성화 함수에 적용하면 0~1사이의 확률값을 얻을 수 있다.&lt;/p&gt;
+&lt;p&gt;모델의 raw output에 활성화함수를 적용하면 확률값을 얻을 수 있다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;predict(test_images)[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;17.750181&lt;/span&gt;
+tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Sequential([model, tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layers&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Softmax()])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;predict(test_images)[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.000015&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Q.  Sparse Categrocial Cross Entropy 손실 함수에서 logits=True가 의미하는 바는?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;losses&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SparseCategoricalCrossentropy(from_logits&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A. from_logits = True 속성은 모델에 의해 생성된 출력 값이 정규화(normalization)되지 않았음을 손실 함수에 알려줍니다. 확률 분포를 생성하기 위해 softmax 함수가 모델에 적용되지 않았다는 것입니다.&lt;/p&gt;
+&lt;p&gt;따라서 이 경우 softmax 함수는 손실 함수에 의해 출력 값에 자동으로 적용됩니다. 이는 손실함수에 from_logits = False 속성을 주고 마지막 층(layer)에 softmax 활성화 함수를 사용하는 것과 차이가 없습니다. 그러나 어떤 경우에는 모델 학습 중 수치 안정성에 도움이 될 수 있습니다.&lt;/p&gt;
+&lt;p&gt;ref: &lt;a href=&#34;https://datascience.stackexchange.com/questions/73093/what-does-from-logits-true-do-in-sparsecategoricalcrossentropy-loss-function&#34;&gt;https://datascience.stackexchange.com/questions/73093/what-does-from-logits-true-do-in-sparsecategoricalcrossentropy-loss-function&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;modelcompile--modelfit--modelevaluate--modelpredict&#34;&gt;model.compile / model.fit / model.evaluate / model.predict&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;compile 메소드: 손실함수, 옵티마이저, 측도 등의 모델 세팅&lt;/li&gt;
+&lt;li&gt;fit 메소드: 손실함수의 최소값을 목표로 모델 훈련&lt;/li&gt;
+&lt;li&gt;evalute 메소드: 모델의 성능을 측정&lt;/li&gt;
+&lt;li&gt;predict 메소드: 모델의 예측값 출력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Epoch 1/10
+1875/1875 &lt;span style=&#34;color:#f92672&#34;&gt;[==============================]&lt;/span&gt; - 5s 2ms/step - loss: 0.6305 - accuracy: 0.7775
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Q. MNIST 패션 데이터의 훈련 세트에 60000개의 이미지가 있는데 모델이 1875개씩 학습하는 이유는 무엇입니까?&lt;/p&gt;
+&lt;p&gt;A. 모델의 batch 크기가 32이고, 1875번 배치 학습됐다는 뜻입니다. 1875*32 = 60000&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;model.fit 메소드의 파라미터인 batch_size의 default 값은 32이다.&lt;/p&gt;
+&lt;p&gt;ref: &lt;a href=&#34;https://stackoverflow.com/questions/62186784/why-the-model-is-training-on-only-1875-training-set-images-if-there-are-60000-im&#34;&gt;https://stackoverflow.com/questions/62186784/why-the-model-is-training-on-only-1875-training-set-images-if-there-are-60000-im&lt;/a&gt;
+&lt;a href=&#34;https://keras.rstudio.com/reference/fit.html&#34;&gt;https://keras.rstudio.com/reference/fit.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     

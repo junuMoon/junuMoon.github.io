@@ -92,17 +92,15 @@
     
         <article class="post-list h-feed">
     <header class="post-header">
-        <h1 class="p-name post-title"><a class="u-url" href="/posts/20210209-til-tensorflow-quickstart_for_beginners/">[20210209_TIL] Tensorflow Model</a></h1>
+        <h1 class="p-name post-title"><a class="u-url" href="/posts/20210209-til-tensorflow-quickstart_for_beginners/">[20210209_TIL] Tensorflow Tutorial</a></h1>
     </header>
 
     <div class="content post-summary p-summary">
-        TensorFlow: Quickstart for beginners Flatten 다차원 벡터를 일차원으로 쭉 펴준다.
-Dense Input과 Ouput 레이어를 연결한다.
-Dropout 무작위로 뉴론을 드랍하여 모델의 overfitting을 막는다.
-Softmax 입력 벡터의 원소를 0과 1사이의 값으로 변환하여 리턴한다.
-Loss 모델의 예측값과 실제 답의 차이.
-Sparse Categorical Crossentropy Loss function 중 하나
-model.compile / model.fit / model.evaluate compile 메소드: 손실함수, 옵티마이저, 측정지표 등의 모델 구성 fit 메소드: 손실함수의 값을 최소로 하는 모델 훈련 evalute 메소드: 모델의 성능을 측정
+        Layers 심층신경망 모델은 여러 개의 층(layer)로 이뤄진다.
+Flatten 다차원 벡터를 일차원으로 쭉 펴준다. 이 레이어에는 학습시킬 파라미터가 없다. 단지 데이터를 반영할 뿐이다.
+Dense Input과 Output 레이어를 연결한다. densely connected(fully connected)는 깊게 얽힌, 다른 단어로 &lsquo;심층&rsquo;을 뜻한다. keras.layers.Dense 메소드는 노드 개수를 파라미터로 갖는다.
+Dropout 모델이 훈련 데이터에 지나치게 맞춰져 오히려 테스트 데이터에서 정확도가 떨어지는 현상인 과적합(overfitting)을 막기 위한 옵션. 파라미터로 받은 rate 만큼 무작위로 뉴론을 드랍하여 모델의 overfitting을 막는다.
+ Dropout: A Simple Way to Prevent Neural Networks from Overfitting  Compile the model 모델을 훈련시키기 전에 다음과 같은 세팅이 필요하다.
     </div>
     
     
