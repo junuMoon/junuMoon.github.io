@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://junumoon.github.io/</loc>
+    <lastmod>2021-02-26T11:53:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/posts/</loc>
+    <lastmod>2021-02-26T11:53:12+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://junumoon.github.io/posts/20210226-breakthrough_business-plan_in_south-korea/</loc>
+    <lastmod>2021-02-26T11:53:12+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://junumoon.github.io/posts/20210209-tie-tensorflow-model.evaluate-numpy_class_type_value_error/</loc>
     <lastmod>2021-02-09T20:12:34+09:00</lastmod>
   </url>
@@ -23,17 +38,7 @@
   </url>
   
   <url>
-    <loc>https://junumoon.github.io/</loc>
-    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://junumoon.github.io/tags/numpy/</loc>
-    <lastmod>2021-02-09T20:12:34+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://junumoon.github.io/posts/</loc>
     <lastmod>2021-02-09T20:12:34+09:00</lastmod>
   </url>
   
