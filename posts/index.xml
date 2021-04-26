@@ -6,10 +6,87 @@
     <description>junuMoon (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Feb 2021 11:53:12 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 26 Apr 2021 16:59:57 +0900</lastBuildDate>
     
     <atom:link href="https://junumoon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[TIL] BinarySearchTree 재귀 함수 반환 오류</title>
+      <link>https://junumoon.github.io/posts/til_recursive_function_without_return/</link>
+      <pubDate>Mon, 26 Apr 2021 16:59:57 +0900</pubDate>
+      
+      <guid>https://junumoon.github.io/posts/til_recursive_function_without_return/</guid>
+      <description>&lt;h3 id=&#34;이진탐색트리-자료구조-binary-search-tree&#34;&gt;이진탐색트리 자료구조 Binary Search Tree&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://miro.medium.com/max/315/1*QbBvIgb_WS08Nm17kLGSrQ.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;각 노드는 유니크한 값을 갖는다.&lt;/li&gt;
+&lt;li&gt;최상위에는 루트 노드가 존재한다.&lt;/li&gt;
+&lt;li&gt;다음에 오는 노드는 상위 노드와의 값 비교를 통해 왼쪽 또는 오른쪽에 위치한다.&lt;/li&gt;
+&lt;li&gt;쓰는 이유: 데이터를 항상 제자리에 두기 위하여&lt;/li&gt;
+&lt;li&gt;변화가 많은 동적인 데이터셋에서 정렬 가능한 형태를 유지하기 쉬움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;알고리즘-형태&#34;&gt;알고리즘 형태&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;search&lt;/code&gt; 함수 호출&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;self.root&lt;/code&gt;가 없다면 노드 생성하여 전달
+&lt;ol&gt;
+&lt;li&gt;있다면 재귀함수 &lt;code&gt;_recursive_search&lt;/code&gt; 에 &lt;code&gt;self.root&lt;/code&gt;를 인자로 함수 호출&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;탐색값과 인자로 받은 노드(&lt;code&gt;self.root&lt;/code&gt;)의 값을 비교
+&lt;ol&gt;
+&lt;li&gt;동일하면 노드 리턴&lt;/li&gt;
+&lt;li&gt;노드의 값보다 작다면 루트의 왼쪽 노드를 인자로 다시 &lt;code&gt;_recursive_search&lt;/code&gt; 호출
+&lt;ol&gt;
+&lt;li&gt;동일한 값을 찾을 때까지 재귀&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;노드의 값보다 크다면 루트의 오른쪽 노드를 인자로 다시 &lt;code&gt;_recursive_search&lt;/code&gt; 호출
+&lt;ol&gt;
+&lt;li&gt;동일한 값을 찾을 때까지 재귀&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;찾는 값이 존재하지 않으면 Attribute 에러 raise&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;코드&#34;&gt;코드&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_search_recursive&lt;/span&gt;(self, id, node):
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; id &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; node&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]:
+                &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;find&amp;#39;&lt;/span&gt;)
+                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; node&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;data &lt;span style=&#34;color:#75715e&#34;&gt;# None 값만 반환&lt;/span&gt;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; id &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; node&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;]:
+                &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;left&amp;#39;&lt;/span&gt;)
+                self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_search_recursive(id, node&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;left) 
+                &lt;span style=&#34;color:#75715e&#34;&gt;# return을 주지 않아 새로 호출된 재귀함수의 값이 search 함수에 반환되지 않음&lt;/span&gt;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+                &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;)
+                self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_search_recursive(id, node&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;right)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AttributeError&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; e:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; False
+            
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;search&lt;/span&gt;(self, blog_post_id):
+        blog_post_id &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(blog_post_id)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;root &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; None:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AttributeError&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;no root&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_search_recursive(blog_post_id, self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;root)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;오류&#34;&gt;오류&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;오류 발생: line20에서 재귀함수 &lt;code&gt;_recursive_search&lt;/code&gt;의 리턴값이 항상 None임.&lt;/li&gt;
+&lt;li&gt;오류 원인: 재귀 함수를 호출은 했지만 리턴 값을 전달하지 않음&lt;/li&gt;
+&lt;li&gt;오류 해결: 재귀 함수를 호출하는 라인 8과, 라인12에 return 문 추가
+&lt;code&gt;return self._search_recursive(id, node.left)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reference&#34;&gt;reference&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/54812654/python-recursive-function-without-return-logic&#34;&gt;stackoverflow: recursive function w/o return logic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nickang.com/2017-12-10-why-use-binary-search-tree/&#34;&gt;why use binary search tree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>신입사원이 쓰는 사업계획서 작성법(feat.TDD)</title>
