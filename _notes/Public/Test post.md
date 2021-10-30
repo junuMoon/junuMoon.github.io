@@ -1,6 +1,6 @@
 ---
 title : Test post
-notetype : feed
+notetype : unfeed
 date : 31-10-2021
 ---
 
