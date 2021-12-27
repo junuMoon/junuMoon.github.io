@@ -1,6 +1,6 @@
 ---
 title : Why do I hate HWP so badly
-notetype : feed
+notetype : unfeed
 date : 21-11-2021
 ---
 
