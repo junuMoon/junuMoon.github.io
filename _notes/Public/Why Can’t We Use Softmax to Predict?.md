@@ -3,7 +3,10 @@ title : Why Can’t we use Softmax to Predict?
 notetype : feed
 date : 27-12-2021
 ---
-![why_softmax.png](../imgs/why_softmax.png)
+
+속해 있는 머신러닝 스터디 오픈카톡방에서 이런 카톡이 올라왔다.
+
+> 학습을 할 때는 소프트맥수 함수를 쓰지만 추론을 할 때는 안 쓴다는 말 혹시 누가 좀 더 설명해주실 분ㅠ
 
 ## 소프트맥스란
 소프트맥스는 활성함수 중 하나로 다중 카테고리 분류 문제에 쓰인다. Softmax와 Sigmoid 모두 모델의 출력값을 0과 1사이의 값으로 뱉기 때문에 우리는 이걸 확률값으로 해석할 수 있다. Sigmoid는 맞냐/아니냐를 뜻하는 이진 분류 문제에 사용된다. 1이면 맞고 0이면 아니다. Softmax는 k개의 클래스에 해당하는 확률값을 뱉는다. k1에 0.1 k2에 0.2 k3에 0.7, 이런 식이다. Softmax로 계산한 확률값들의 총합은 항상 1이다(당연히). Softmax/Sigmoid의 예측 확률값과 실제값을 Cross Entropy 함수에 먹여서 Loss를 계산할 수 있다. 
@@ -73,4 +76,4 @@ Out[249]: [0.620957047789532, 0.34991825330155735, 0.2873353251154307]
 ## References 
 - [A Gentle Introduction to Cross-Entropy for Machine Learning](https://machinelearningmastery.com/cross-entropy-for-machine-learning/)
 - [Cross-entropy 의 이해: 정보이론과의 관계 :: Deep Play](https://3months.tistory.com/436)
-- [Nothing but NumPy: Understanding & Creating Binary Classification Neural Networks with Computational Graphs from Scratch | by Rafay Khan | Towards Data Science](https://towardsdatascience.com/nothing-but-numpy-understanding-creating-binary-classification-neural-networks-with-e746423c8d5c)
+- [Creating Binary Classification Neural Networks with Computational Graphs from Scratch](https://towardsdatascience.com/nothing-but-numpy-understanding-creating-binary-classification-neural-networks-with-e746423c8d5c)
