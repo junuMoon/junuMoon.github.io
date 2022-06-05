@@ -1,4 +1,8 @@
-# How GPUs work on Neural Network
+---
+title : How GPUs work on Neural Network
+notetype : feed
+date : 05-06-2022
+---
 
 ![https://www.memecreator.org/static/images/memes/4853666.jpg](https://www.memecreator.org/static/images/memes/4853666.jpg)
 
